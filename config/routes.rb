@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   #見た目sighupの方がurl的にかっこいいやろ
   #users#newでもusers#signupでもどっちでも同じもん開く
   
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
   
   
 end
