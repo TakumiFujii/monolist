@@ -23,5 +23,8 @@ Rails.application.routes.draw do
   
   #Want/Have機能用
   resources :ownerships, only: [:create, :destroy]
-
+  
+  #ランキング用
+  get 'rankings/want', to: 'rankings#want'
+  get "rankings/have", to: "rankings#have"
 end
